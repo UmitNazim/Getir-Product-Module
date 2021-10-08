@@ -1,0 +1,34 @@
+@mixin wrapper($font-size, $height) {
+  font-size: $font-size;
+  height: $height;
+}
+
+.atom-button {
+  font-weight: 600;
+  border-radius: 2px;
+  border: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &__disabled,
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &__sm {
+    @include wrapper($font-size: 12px, $height: 30px);
+  }
+
+  &__md {
+    @include wrapper($font-size: 16px, $height: 34px);
+    @media (min-width: 767px) {
+      height: 32px;
+    }
+  }
+
+  &__lg {
+    @include wrapper($font-size: 16px, $height: 36px);
+  }
+}

@@ -1,0 +1,10 @@
+.atom-label {
+  font-size: 13px;
+  font-weight: 500;
+
+  &__error {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--rose-red);
+  }
+}

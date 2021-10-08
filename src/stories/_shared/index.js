@@ -1,0 +1,17 @@
+export const colors = [
+  'mercury',
+  'ball-blue',
+  'ocean',
+  'white',
+  'cloud',
+  'titan-white',
+  'romance',
+  'gainsboro',
+  'alabaster',
+  'stormy-grey',
+  'silver-chalice',
+  'lavender-pinocchio',
+  'rangoon',
+  'vampire-grey',
+  'white-smoke',
+];

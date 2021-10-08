@@ -1,0 +1,32 @@
+{
+  "basket": {
+    "name": "Sepet"
+  },
+  "brand": {
+    "list": "Markalar",
+    "name": "Marka",
+    "policy": "Gizlilik Politikası",
+    "year": "2019 Pazarlama"
+  },
+  "error": {
+    "notFound": "Öğe Bulunamadı",
+    "noProduct": "Henüz ürün eklenmedi"
+  },
+  "product": {
+    "list": "Ürünler",
+    "name": "Ürün"
+  },
+  "sorting": {
+    "name": "Sıralama",
+    "type": {
+      "highPriceToLow": "Yüksek Fiyattan Düşük Fiyata",
+      "lowPriceToHigh": "Düşük Fiyattan Yüksek Fiyata",
+      "newToOld": "Yeni Üründen Eski Ürüne",
+      "oldToNew": "Eski Üründen yeni Ürüne"
+    }
+  },
+  "tag": {
+    "list": "Etiketler",
+    "name": "Etiket"
+  }
+}

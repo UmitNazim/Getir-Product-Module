@@ -1,0 +1,35 @@
+:root {
+  --mercury: #e5e5e5;
+  --ball-blue: #1ea4ce;
+  --ocean: #147594;
+  --white: #ffffff;
+  --cloud: #c4c4c4;
+  --titan-white: #f3f0fe;
+  --romance: #fefefe;
+  --gainsboro: #dfdee2;
+  --alabaster: #fafafa;
+  --stormy-grey: #697488;
+  --silver-chalice: #a8a8a8;
+  --lavender-pinocchio: #e0e0e0;
+  --rangoon: #191919;
+  --vawpire-grey: #525252;
+  --white-smoke: #f4f4f4;
+}
+
+$main-colors: (
+  "mercury": var(--mercury),
+  "ball-blue": var(--ball-blue),
+  "ocean": var(--ocean),
+  "white": var(--white),
+  "cloud": var(--cloud),
+  "titan-white": var(--titan-white),
+  "romance": var(--romance),
+  "gainsboro": var(--gainsboro),
+  "alabaster": var(--alabaster),
+  "stormy-grey": var(--stormy-grey),
+  "silver-chalice": var(--silver-chalice),
+  "lavender-pinocchio": var(--lavender-pinocchio),
+  "rangoon": var(--rangoon),
+  "vampire-grey": var(--vawpire-grey),
+  "white-smoke": var(--white-smoke),
+);

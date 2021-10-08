@@ -1,0 +1,21 @@
+.organism-card {
+  border-radius: 2px;
+  padding: 22.54px 24px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 11.27px;
+    line-height: 18px;
+    color: var(--stormy-grey);
+  }
+  &--shadow {
+    box-shadow: 0px 6px 24px rgba(93, 62, 188, 0.04);
+  }
+
+  &--hover {
+    &:hover {
+      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+}

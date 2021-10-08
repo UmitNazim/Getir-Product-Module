@@ -1,0 +1,48 @@
+@keyframes atom-loader-animation {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+@mixin size-generator($size) {
+  width: $size;
+  height: $size;
+}
+
+.atom-loader {
+  width: 70px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+  &__bounce {
+    border-radius: 100%;
+    display: inline-block;
+    animation: atom-loader-animation 1.4s infinite ease-in-out both;
+  }
+
+  &__bounce-1 {
+    animation-delay: -0.32s;
+  }
+
+  &__bounce-2 {
+    animation-delay: -0.16s;
+  }
+  &__sm {
+    @include size-generator($size: 10px);
+  }
+  &__md {
+    @include size-generator($size: 15px);
+  }
+  &__lg {
+    @include size-generator($size: 20px);
+  }
+  &__xl {
+    @include size-generator($size: 25px);
+  }
+}

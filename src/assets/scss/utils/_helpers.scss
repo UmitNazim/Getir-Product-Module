@@ -1,0 +1,49 @@
+@each $color, $value in $main-colors {
+  .text-#{$color} {
+    color: $value;
+  }
+
+  .bg-#{$color} {
+    background-color: $value;
+  }
+
+  .hover-#{$color} {
+    &:hover {
+      color: $value;
+    }
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hover-opacity-3 {
+  &:hover {
+    opacity: 0.3;
+  }
+}
+.hover-opacity-5 {
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.hover-opacity-7 {
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.hover-opacity-9 {
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.font-size-14 {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.16px;
+}
+.font-weight-600 {
+  font-weight: 600;
+}

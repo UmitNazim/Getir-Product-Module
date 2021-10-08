@@ -1,0 +1,31 @@
+@keyframes going {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+}
+
+@keyframes coming {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-down-out-enter-active {
+  animation: coming 0.25s;
+  opacity: 0;
+}
+
+.fade-in-down-out-leave-active {
+  animation: going 0.25s;
+}

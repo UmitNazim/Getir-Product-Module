@@ -1,0 +1,32 @@
+{
+  "basket": {
+    "name": "Basket"
+  },
+  "brand": {
+    "list": "Brands",
+    "name": "Brand",
+    "policy": "Privacy Policy",
+    "year": "2019 Marketing"
+  },
+  "error": {
+    "notFound": "Not Found",
+    "noProduct": "You did not add product yet"
+  },
+  "product": {
+    "list": "Products",
+    "name": "Product"
+  },
+  "sorting": {
+    "name": "Sorting",
+    "type": {
+      "highPriceToLow": "High Price To Low",
+      "lowPriceToHigh": "Low Price To High",
+      "newToOld": "New To Old",
+      "oldToNew": "Old To New"
+    }
+  },
+  "tag": {
+    "list": "Tags",
+    "name": "Tag"
+  }
+}
