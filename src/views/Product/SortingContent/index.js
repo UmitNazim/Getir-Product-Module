@@ -1,32 +1,32 @@
 import { AtomRadio, OrganismCard } from 'components';
 import { useTranslation } from 'react-i18next';
+import { connect } from 'react-redux';
+import { getProducts } from 'store/Products/actions';
 
-const SortingContent = () => {
+const SortingContent = ({ getProducts }) => {
   const { t } = useTranslation();
+
   const sortingItems = [
-    { label: 'highPriceToLow' },
-    { label: 'lowPriceToHigh' },
-    { label: 'newToOld' },
-    { label: 'oldToNew' },
+    { label: 'highPriceToLow', sort: 'price', order: 'desc' },
+    { label: 'lowPriceToHigh', sort: 'price', order: 'asc' },
+    { label: 'newToOld', sort: 'added', order: 'asc' },
+    { label: 'oldToNew', sort: 'added', order: 'desc' },
   ];
-  const onChange = (e) => {
-    console.log({ e });
-  };
 
   return (
     <OrganismCard shadow title="sorting.name" className="mb-4">
-      {sortingItems.map(({ label }, index) => (
+      {sortingItems.map((item, index) => (
         <AtomRadio
-          label={t(`sorting.type.${label}`)}
+          label={t(`sorting.type.${item.label}`)}
           key={`sorting-item-${index}`}
-          id={label}
+          id={item.label}
           name="sorting-types"
           className={[1, 2].includes(index) ? 'my-3' : ''}
-          onChange={onChange}
+          onChange={() => getProducts(item)}
         />
       ))}
     </OrganismCard>
   );
 };
 
-export default SortingContent;
+export default connect(null, { getProducts })(SortingContent);
