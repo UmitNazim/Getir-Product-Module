@@ -1,10 +1,11 @@
 export { default as AtomButton } from './AtomButton';
 export { default as AtomCheckBox } from './AtomCheckBox';
+export { default as AtomDivider } from './AtomDivider';
+export { default as AtomImage } from './AtomImage';
 export { default as AtomLoader } from './AtomLoader';
+export { default as AtomNoDataCard } from './AtomNoDataCard';
 export { default as AtomRadio } from './AtomRadio';
+export { default as MoleculeProduct } from './MoleculeProduct';
 export { default as MoleculeSearchInput } from './MoleculeSearchInput';
 export { default as OrganismCard } from './OrganismCard';
-export { default as MoleculeProduct } from './MoleculeProduct';
-export { default as AtomImage } from './AtomImage';
-export { default as AtomDivider } from './AtomDivider';
-export { default as AtomNoDataCard } from './AtomNoDataCard';
+export { default as OrganismPagination } from './OrganismPagination';

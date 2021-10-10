@@ -1,9 +1,9 @@
-import { OrganismCard, MoleculeSearchInput, AtomCheckBox, AtomNoDataCard } from 'components';
-import { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
+import { useState, useEffect } from 'react';
 import { getTags, getTagsBySearch, groupTags } from 'store/Tags/actions';
+import { OrganismCard, MoleculeSearchInput, AtomCheckBox, AtomNoDataCard } from 'components';
 
-const TagsContent = ({ tags, getTagsBySearch, getTags, groupTags }) => {
+const TagsContent = ({ tags, getTags, groupTags, getTagsBySearch }) => {
   const [selectedTags, setSelectedTags] = useState([]);
   const [isTagsActionDone, setIsTagsActionDone] = useState(false);
 
@@ -30,15 +30,15 @@ const TagsContent = ({ tags, getTagsBySearch, getTags, groupTags }) => {
         {isTagsActionDone && tags.length ? (
           tags.map(({ tag, totalCount, value = false }) => (
             <AtomCheckBox
-              onChange={(checked) => onCheckboxChanged({ totalCount, tag, value: checked })}
-              value={value}
-              label={tag}
-              labelSuffix={totalCount}
               key={tag}
+              label={tag}
+              value={value}
+              labelSuffix={totalCount}
+              onChange={(checked) => onCheckboxChanged({ totalCount, tag, value: checked })}
             />
           ))
         ) : (
-          <AtomNoDataCard />
+          <AtomNoDataCard></AtomNoDataCard>
         )}
       </div>
     </OrganismCard>

@@ -1,17 +1,19 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const AtomButton = ({
   onClick,
-  color = 'white',
-  bgColor = 'ball-blue',
   size = 'sm',
-  block = false,
-  disabled = false,
   flat = false,
+  block = false,
+  shadow = false,
   type = 'button',
-  children = null,
+  color = 'white',
   className = [],
+  children = null,
+  disabled = false,
+  bgColor = 'ball-blue',
+  ...props
 }) => {
   let options = classNames({
     'atom-button': true,
@@ -21,10 +23,12 @@ const AtomButton = ({
     'w-100': block,
     'atom-button__disabled': disabled,
     'rounded-0': flat,
+    'atom-button__shadow': shadow,
     ...className.reduce((acc, curr) => ((acc[curr] = true), acc), {}),
   });
+
   return (
-    <button onClick={onClick} className={options} type={type} disabled={disabled}>
+    <button onClick={onClick} className={options} type={type} disabled={disabled} {...props}>
       {children}
     </button>
   );
@@ -37,6 +41,7 @@ AtomButton.propTypes = {
   block: PropTypes.bool,
   disabled: PropTypes.bool,
   flat: PropTypes.bool,
+  shadow: PropTypes.bool,
   type: PropTypes.oneOf(['button', 'submit']),
   onClick: PropTypes.func,
   children: PropTypes.any,

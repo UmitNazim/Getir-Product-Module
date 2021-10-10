@@ -9,7 +9,6 @@ export default {
       control: { type: 'select' },
       options: colors,
     },
-
     size: {
       control: { type: 'radio' },
       options: ['sm', 'md', 'lg', 'xl'],

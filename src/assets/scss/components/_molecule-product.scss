@@ -1,22 +1,24 @@
 .molecule-product {
   &__image {
     width: 100%;
-    border: 1.17666px solid var(--titan-white);
-    border-radius: 12px;
     padding: 16px;
+    border-radius: 12px;
+    border: 1.17666px solid var(--titan-white);
   }
+
   &__price {
     margin-top: 8px;
     font-size: 14px;
     line-height: 20px;
     color: var(--ball-blue);
   }
+
   &__description {
-    font-weight: 600;
+    margin: 8px 0;
     font-size: 14px;
+    font-weight: 600;
+    min-height: 40px;
     line-height: 20px;
     color: var(--rangoon);
-    margin: 8px 0;
-    min-height: 40px;
   }
 }

@@ -1,7 +1,7 @@
-import { OrganismCard, MoleculeSearchInput, AtomCheckBox, AtomNoDataCard } from 'components';
-import { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
+import { useState, useEffect } from 'react';
 import { getBrands, getBrandsBySearch, groupBrands } from 'store/Brands/actions';
+import { OrganismCard, MoleculeSearchInput, AtomCheckBox, AtomNoDataCard } from 'components';
 
 const BrandsContent = ({ brands, getBrandsBySearch, getBrands, groupBrands }) => {
   const [selectedBrands, setSelectedBrands] = useState([]);
@@ -48,6 +48,7 @@ const BrandsContent = ({ brands, getBrandsBySearch, getBrands, groupBrands }) =>
     </OrganismCard>
   );
 };
+
 const mapStateToProps = ({ brands: { brands } }) => ({ brands });
 export default connect(mapStateToProps, { groupBrands, getBrandsBySearch, getBrands })(
   BrandsContent,

@@ -3,11 +3,12 @@ import { OrganismCard } from 'components';
 import { useTranslation } from 'react-i18next';
 
 const AtomNoDataCard = ({
+  children,
   color = 'lavender-pinocchio',
   description = 'error.notFound',
-  children,
 }) => {
   const { t } = useTranslation();
+
   return (
     <OrganismCard color={color}>
       {description && (

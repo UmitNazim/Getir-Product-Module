@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import './assets/scss/main.scss';
-import { Provider } from 'react-redux';
-import App from './App';
 import './locales';
+import React from 'react';
+import App from './App';
 import store from './store';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
 ReactDOM.render(
   <React.StrictMode>
