@@ -6,20 +6,24 @@
 ```
 npm install
 ```
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads Project for development
 ```
 npm run serve
 ```
-### Runs  json-server (runs this command with npm run serve)
-```
-npm run json-server
-```
-
-### Compiles and minifies for production
+### Compiles and minifies Project for production
 ```
 npm run build
 ```
-### Runs unit tests
+### Runs json-server (run this command with npm run serve)
 ```
-npm run tast:unit
+npm run json-server
 ```
+### Compiles StoryBook for development
+```
+npm run storybook
+```
+### Compiles and minifies StoryBook for production
+```
+npm run build-storybook
+```
+

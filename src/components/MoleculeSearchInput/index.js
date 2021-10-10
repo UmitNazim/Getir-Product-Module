@@ -18,22 +18,22 @@ const MoleculeSearchInput = ({ onChange, className, ...props }) => {
   return (
     <div className={className}>
       <input
+        {...props}
+        type="text"
         value={inputValue}
         onChange={onInputChange}
         className="molecule-input"
-        type="text"
-        {...props}
       />
     </div>
   );
 };
 
 MoleculeSearchInput.propTypes = {
-  disabled: PropTypes.bool,
-  placeholder: PropTypes.string,
   label: PropTypes.string,
-  type: PropTypes.oneOf(['text', 'password', 'email']),
+  disabled: PropTypes.bool,
   onChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  type: PropTypes.oneOf(['text', 'password', 'email']),
 };
 
 export default MoleculeSearchInput;

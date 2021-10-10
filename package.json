@@ -1,12 +1,13 @@
 {
   "name": "getir-product-module",
+  "author": "cevikumitnazim@gmail.com",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "react-scripts start",
     "build:staging": "react-scripts build env.staging ",
-    "build:production": "react-scripts build env.production ",
-    "storybook": "start-storybook -p 6006 -s public",
+    "build:production": "react-scripts build env.production",
+    "storybook": "start-storybook -p 7000 -s public",
     "build-storybook": "build-storybook -s public",
     "json-server": "json-server --watch db.json"
   },

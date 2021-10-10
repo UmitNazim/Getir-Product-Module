@@ -5,11 +5,11 @@ import { useTranslation } from 'react-i18next';
 const OrganismCard = ({
   title,
   children,
+  flat = false,
+  hover = false,
   color = 'white',
   shadow = false,
-  flat = false,
   noPadding = false,
-  hover = false,
   ...props
 }) => {
   let options = classNames({

@@ -9,8 +9,8 @@
     "year": "2019 Pazarlama"
   },
   "error": {
-    "notFound": "Öğe Bulunamadı",
-    "noProduct": "Henüz ürün eklenmedi"
+    "noProduct": "Henüz Ürün Eklenmedi",
+    "notFound": "Öğe Bulunamadı"
   },
   "product": {
     "list": "Ürünler",

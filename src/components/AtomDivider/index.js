@@ -1,5 +1,5 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const AtomDivider = ({ color = 'white-smoke', size = 'sm', className = [] }) => {
   let options = classNames({

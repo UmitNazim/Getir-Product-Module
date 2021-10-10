@@ -1,28 +1,28 @@
-import { AtomRadio, OrganismCard } from 'components';
-import { useTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { getProducts } from 'store/Products/actions';
+import { AtomRadio, OrganismCard } from 'components';
 
 const SortingContent = ({ getProducts }) => {
   const { t } = useTranslation();
 
-  const sortingItems = [
-    { label: 'highPriceToLow', sort: 'price', order: 'desc' },
-    { label: 'lowPriceToHigh', sort: 'price', order: 'asc' },
-    { label: 'newToOld', sort: 'added', order: 'asc' },
-    { label: 'oldToNew', sort: 'added', order: 'desc' },
+  const sortingParameters = [
+    { label: 'highPriceToLow', _sort: 'price', _order: 'desc' },
+    { label: 'lowPriceToHigh', _sort: 'price', _order: 'asc' },
+    { label: 'newToOld', _sort: 'added', _order: 'asc' },
+    { label: 'oldToNew', _sort: 'added', _order: 'desc' },
   ];
 
   return (
     <OrganismCard shadow title="sorting.name" className="mb-4">
-      {sortingItems.map((item, index) => (
+      {sortingParameters.map(({ label, ...rest }, index) => (
         <AtomRadio
-          label={t(`sorting.type.${item.label}`)}
-          key={`sorting-item-${index}`}
-          id={item.label}
+          id={label}
           name="sorting-types"
+          key={`sorting-item-${index}`}
+          label={t(`sorting.type.${label}`)}
+          onChange={() => getProducts(rest)}
           className={[1, 2].includes(index) ? 'my-3' : ''}
-          onChange={() => getProducts(item)}
         />
       ))}
     </OrganismCard>

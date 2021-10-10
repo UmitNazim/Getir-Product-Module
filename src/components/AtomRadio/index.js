@@ -4,11 +4,11 @@ const AtomRadio = ({ onChange, label = null, name = 'radio', className = [], id 
   return (
     <div className={` d-flex align-item-center atom-radio ${className || ''}`}>
       <input
-        onChange={() => onChange({ id })}
-        className="atom-radio__input"
-        type="radio"
-        name={name}
         id={id}
+        name={name}
+        type="radio"
+        className="atom-radio__input"
+        onChange={() => onChange({ id })}
       />
       <label className="atom-radio__label" htmlFor={id}>
         {label}
@@ -19,8 +19,9 @@ const AtomRadio = ({ onChange, label = null, name = 'radio', className = [], id 
 
 AtomRadio.propTypes = {
   label: PropTypes.string,
-  name: PropTypes.string.isRequired,
   id: PropTypes.any.isRequired,
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
 };
 
 export default AtomRadio;

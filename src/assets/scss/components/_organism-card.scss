@@ -3,12 +3,13 @@
   padding: 22.54px 24px;
 
   &__title {
-    font-weight: 600;
     font-size: 13px;
-    margin-bottom: 11.27px;
+    font-weight: 600;
     line-height: 18px;
+    margin-bottom: 11.27px;
     color: var(--stormy-grey);
   }
+
   &--shadow {
     box-shadow: 0px 6px 24px rgba(93, 62, 188, 0.04);
   }
