@@ -16,19 +16,19 @@
   &:disabled {
     opacity: 0.3;
   }
+  &__shadow {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
 
   &__sm {
     @include wrapper($font-size: 12px, $height: 30px);
   }
 
   &__md {
-    @include wrapper($font-size: 16px, $height: 34px);
-    @media (min-width: 767px) {
-      height: 32px;
-    }
+    @include wrapper($font-size: 14px, $height: 40px);
   }
 
   &__lg {
-    @include wrapper($font-size: 16px, $height: 36px);
+    @include wrapper($font-size: 18px, $height: 50px);
   }
 }

@@ -1,17 +1,16 @@
-import { GROUP_BRANDS, GET_BRANDS_BY_SEARCH, GET_BRANDS } from './types';
-import groupBy from 'lodash/groupBy';
 import axios from 'utils/api';
+import groupBy from 'lodash/groupBy';
+import { GROUP_BRANDS, GET_BRANDS_BY_SEARCH, GET_BRANDS } from './types';
 
 export const groupBrands = () => async (dispatch) => {
-  await axios.get('items').then(({ data }) => {
-    const brands = groupBy(data, 'manufacturer');
-    dispatch({
-      type: GROUP_BRANDS,
-      payload: Object.keys(brands).map((key) => ({
-        manufacturer: key,
-        totalCount: brands[key].length,
-      })),
-    });
+  const { data } = await axios.get('items');
+  const brands = groupBy(data, 'manufacturer');
+  dispatch({
+    type: GROUP_BRANDS,
+    payload: Object.keys(brands).map((key) => ({
+      manufacturer: key,
+      totalCount: brands[key].length,
+    })),
   });
 };
 

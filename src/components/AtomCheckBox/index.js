@@ -4,11 +4,11 @@ const AtomCheckBox = ({ label = null, value = false, onChange, labelSuffix = nul
   return (
     <div className="d-flex align-item-center mb-2">
       <input
-        className="atom-checkbox__input"
-        type="checkbox"
-        value={value}
-        onChange={({ target: { checked } }) => onChange(checked)}
         id={label}
+        value={value}
+        type="checkbox"
+        className="atom-checkbox__input"
+        onChange={({ target: { checked } }) => onChange(checked)}
       />
       <label className="atom-checkbox__label" htmlFor={label}>
         {label}
@@ -23,6 +23,7 @@ const AtomCheckBox = ({ label = null, value = false, onChange, labelSuffix = nul
 AtomCheckBox.propTypes = {
   label: PropTypes.string,
   value: PropTypes.bool,
+  onChange: PropTypes.func,
 };
 
 export default AtomCheckBox;

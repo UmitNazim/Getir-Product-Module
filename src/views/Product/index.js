@@ -1,18 +1,18 @@
-import BrandsContent from './BrandsContent';
-import ProductList from './ProductList';
-import SortingContent from './SortingContent';
 import TagsContent from './TagsContent';
+import BrandsContent from './BrandsContent';
+import SortingContent from './SortingContent';
+import ProductListContent from './ProductListContent';
 
 const Products = () => {
   return (
     <div className="row">
       <div className="col-sm-12 col-md-3">
-        <SortingContent />
-        <BrandsContent />
-        <TagsContent />
+        <SortingContent></SortingContent>
+        <BrandsContent></BrandsContent>
+        <TagsContent></TagsContent>
       </div>
       <div className="col-sm-12 col-md-6">
-        <ProductList />
+        <ProductListContent></ProductListContent>
       </div>
     </div>
   );

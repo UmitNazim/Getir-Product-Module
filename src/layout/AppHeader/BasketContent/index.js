@@ -1,6 +1,6 @@
-import { OrganismCard, AtomDivider, AtomButton, AtomImage, AtomNoDataCard } from 'components';
 import { connect } from 'react-redux';
 import { addBasket } from 'store/Basket/actions';
+import { OrganismCard, AtomDivider, AtomButton, AtomImage, AtomNoDataCard } from 'components';
 
 const BasketContent = ({ basket, basketTotalPrice, addBasket }) => {
   const onIncrement = (key) => {
@@ -45,9 +45,9 @@ const BasketContent = ({ basket, basketTotalPrice, addBasket }) => {
                         <span className="basket-content__count--content">{basket[key].count}</span>
                       </div>
                       <AtomButton
-                        onClick={() => onIncrement(key)}
                         className={['p-0']}
                         bgColor="transparent"
+                        onClick={() => onIncrement(key)}
                       >
                         <AtomImage src={require('assets/icons/plus-sign.svg').default} />
                       </AtomButton>

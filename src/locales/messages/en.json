@@ -9,8 +9,8 @@
     "year": "2019 Marketing"
   },
   "error": {
-    "notFound": "Not Found",
-    "noProduct": "You did not add product yet"
+    "noProduct": "You did not add product yet",
+    "notFound": "Not Found"
   },
   "product": {
     "list": "Products",

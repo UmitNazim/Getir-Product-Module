@@ -1,20 +1,19 @@
-import { AtomImage, AtomButton } from 'components';
-import BasketContent from './BasketContent';
 import { useState } from 'react';
 import { connect } from 'react-redux';
+import BasketContent from './BasketContent';
+import { AtomImage, AtomButton } from 'components';
 
 const AppHeader = ({ basketTotalPrice }) => {
   const [basketNeedsOpen, setBasketNeedsOpen] = useState(false);
 
   return (
-    <header className="app-header d-flex align-items-center ">
-      <div className="app-header__content container d-flex justify-content-between align-items-center position-relative">
-        <div></div>
+    <header className="app-header">
+      <div className="app-header__content d-flex justify-content-between align-items-center position-relative">
         <AtomImage src={require('assets/icons/module-logo.svg').default} alt="module-logo" />
         <AtomButton
-          onClick={() => setBasketNeedsOpen(!basketNeedsOpen)}
           bgColor="ocean"
           className={['basket-content']}
+          onClick={() => setBasketNeedsOpen(!basketNeedsOpen)}
         >
           <AtomImage src={require('assets/icons/basket.svg').default} alt="basket-logo" />
           <span className="ms-2"> &#8378;{basketTotalPrice.toFixed(2)}</span>

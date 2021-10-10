@@ -1,8 +1,8 @@
 import { GROUP_BRANDS, GET_BRANDS_BY_SEARCH, GET_BRANDS } from './types';
 
 const INITIAL_STATE = {
-  groupedBrands: [],
   brands: [],
+  groupedBrands: [],
   selectedBrands: [],
 };
 
